@@ -1,0 +1,3 @@
+.todo-item.is-completed label {
+  text-decoration: line-through;
+}

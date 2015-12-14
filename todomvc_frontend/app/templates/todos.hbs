@@ -1,0 +1,17 @@
+<div class="new_todo">
+  {{input type="text" id="new-todo" placeholder="What to do next?" value=newTitle action="createTodo"}}
+</div>
+
+<ol class="todos-list">
+  {{#each model as |item|}}
+    {{todo-item item=item}}
+  {{else}}
+    <p class="todos-no_items">No todos to do.</p>
+  {{/each}}
+</ol>
+
+<div class="todos-count">
+  {{ remaining }} {{ inflection }} left.
+</div>
+
+{{outlet}}
